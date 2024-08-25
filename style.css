@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main-container {
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-size: 3rem;
+}
+
+button {
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#start-btn {
+    background-color: rgb(47, 189, 137);
+}
+#stop-btn {
+    background-color: rgb(189, 47, 47);
+    color: white;
+}
+#reset-btn {
+    background-color: rgb(152, 162, 43);
+}
