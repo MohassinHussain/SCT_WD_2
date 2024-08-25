@@ -23,10 +23,48 @@ button {
 #start-btn {
     background-color: rgb(47, 189, 137);
 }
-#stop-btn {
+#pause-btn {
     background-color: rgb(189, 47, 47);
     color: white;
 }
 #reset-btn {
     background-color: rgb(152, 162, 43);
+}
+
+#lap {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.laps {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    background-color: aliceblue;
+    color: black;
+    width: 10rem;
+    height: 10rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    overflow: auto;
+}
+
+.lap  {
+    color: black;
+    font-size: 1.5rem;
+}
+
+#lapssting {
+    height: 8rem;
+    width: 10rem;
+    background-color: aliceblue;    
+    padding: 1rem;
+    border-radius: 1rem;
+    overflow: auto;
+}
+
+.no-laps-heading {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+
 }

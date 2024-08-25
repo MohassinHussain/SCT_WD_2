@@ -1,7 +1,6 @@
 const startBtn = document.getElementById('start-btn')
-const stopBtn = document.getElementById('stop-btn')
+const pauseBtn = document.getElementById('pause-btn')
 const resetBtn = document.getElementById('reset-btn')
-
 
 const hr = document.getElementById('hr')  
 const  mi = document.getElementById('min')  
@@ -17,11 +16,25 @@ let timer = false
 startBtn.addEventListener('click', ()=>{
     timer = true;
     stopwatch();
+    document.getElementById('lapssting').style.display = "flex"
+    document.getElementById('lapssting').style.flexDirection = "column"
 })
 
-stopBtn.addEventListener('click', ()=>{
+let array = []
+// let i = 0;
+let lapsDiv;
+let lap;
+pauseBtn.addEventListener('click', ()=>{
     timer = false;
+    document.querySelector('.no-laps-heading').innerHTML= "Laps:"
+    // document.getElementById('lapsses') //to update the same line of laps every time
+    lap = document.createElement('p')
+    lap.className = "lap"
     
+    lap.innerText = `${hour.toString()} : ${min.toString()} : ${secs.toString()} : ${count.toString()}` 
+    document.getElementById('lapssting').appendChild(lap)
+    // document.getElementById('lap').innerHTML = `Laps:- ${hour.toString()} : ${min.toString()} : ${secs.toString()}`    
+   
 })
 resetBtn.addEventListener('click', ()=>{
     hour = 0;
@@ -35,7 +48,17 @@ resetBtn.addEventListener('click', ()=>{
     s.innerHTML = "00" + " : "
     cnt.innerHTML = "00"
 
+    const lapsstingDiv = document.getElementById('lapssting');
+    removeAllChildNodes(lapsstingDiv);
+    
 })
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
 
 
 function stopwatch() {
